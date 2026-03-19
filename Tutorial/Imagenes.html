@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/estilo1.css">
+        <link rel="icon" href="IMG/corazon.ico">
+        <title>Imagenes</title>
+    </head>
+    <body>
+        <header>
+            <h1>Tutorial HTML 5, CSS Imagenes</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li> <a href="index.html">Inicio </a></li>
+                <li> <a href="Bordes.html">Bordes </a></li>
+                <li> <a href="Sombras.html">Sombras </a></li>
+                <li> <a href="Cajas.html">Cajas Flotantes </a></li>
+                <li> <a href="Posicion.html">Posicion </a></li>
+                <li> <a href="Transformacion.html">Transformacion </a></li>
+                <li> <a href="Imagenes.html">Imagenes</a></li>
+                <li> <a href="Formularios.html">Formularios </a></li>
+                <li> <a href="Iframe.html">Iframe </a></li>
+                <li> <a href="Transiciones.html">Transiciones </a></li>
+                <li> <a href="Columnas.html">Columnas </a></li>
+                <li> <a href="Video.html">Video </a></li>
+                <li> <a href="Audio.html">Audio </a></li>
+                <li> <a href="Transparencias.html">Transparencias </a></li>
+                <li> <a href="Animacion.html">Animacion </a></li>
+                <li> <a href="Svg.html">SVG </a></li>
+                <li> <a href="Responsive.html">Responsive </a></li>
+                <li> <a href="Editable.html">Contenido editable </a></li>
+                <li> <a href="Storage.html">Storage </a></li>
+            </ul>
+
+        </nav>
+
+        <section>
+
+            <h2>Las palabras mágicas </h2>
+            <article>
+                <p>En HTML5 existen algunas propiedades CSS que nos permiten
+                    añadir fondos de página, ya sea de un simple color (opaco o
+                    con transparencia), una imagen o múltiples imágenes una
+                    encima de la otra.</p>
+
+                <h3>Color de fondo</h3>
+                <p>Para especificar un color de fondo, ya sea para todo el html,
+                    o sólo para un <div> o sección del html utilizamos la
+                        propiedad background-color:</p><br>
+
+                    <div class="caja-codigo">
+                        header{<br>
+                        background-color:#E3D193;<br>
+                        }
+                    </div><br><br>
+                    <h3>Color de fondo semitransparente</h3>
+                    <p>Si deseamos especificar un color con un determinado
+                        índice de transparencia y queremos utilizar el código de
+                        color RGB, podemos usar la siguiente variante, en la que
+                        el 4º valor (0.4 en el ejemplo anterior) es la cantidad
+                        de transparencia (siendo 0 la transparencia total y 1 la
+                        opacidad total).</p><br>
+                    <div
+                        class="caja-codigo">background-color:rgba(255,255,0,0.4);</div><br><br>
+                    <h3>Imagen de fondo</h3>
+                    <p>Si además queremos añadir una imagen de fondo (para todo
+                        el < body >, o únicamente como fondo de un <div>),
+                            usaremos la propiedad: background-url:</p>
+                        <div class="caja-codigo">
+                            #explicacion{<br>
+                            background:url('../imagenes/imagen.png');<br>
+                            }
+                        </div>
+                        <p>Con el código del ejemplo superior hemos añadido un
+                            mosaico de una imagen como fondo únicamente del <
+                            div > llamado 'explicacion', que es la zona azul que
+                            se muestra a continuación:</p>
+                    </article>
+
+                    <h2>Superposición de múltiples imágenes como fondo</h2>
+                    <article>
+                        <p>Como novedad, en HTML5, ahora tenemos la posibilidad
+                            de construir un fondo de pantalla o de un <div>
+                                superponiendo diferentes imágenes individuales
+                                (como si fueran capas en Photoshop).</p><br>
+                            <div class="caja-codigo">
+                                body{<br>
+                                background:url('../img/css.png'),<br>
+                                url('../img/rayas3.png'),<br>
+                                url('../img/infantil.gif');<br>
+                                }
+                            </div><br>
+                            <p>(El escudo en grande con el título "CSS" en su
+                                parte superior que hay en la parte central del
+                                ejemplo no forma parte del fondo, sino que
+                                correspondería al contenido de la página,
+                                colocada en este caso únicamente como
+                                ornamento).</p><br>
+                            <p>En este ejemplo se utilizan 3 imágenes
+                                superpuestas entre sí para formar un fondo
+                                común. El orden de indicación de las imágenes es
+                                muy importante, ya que de esta manera se define
+                                el orden de apilamiento, es decir, así se
+                                especifica qué imagen estará por encima de las
+                                otras. Así, la primera imagen (css.png) se
+                                colocará por encima de las restantes, mientras
+                                que la última (infantil.gif) estará por debajo
+                                de todas ellas.</p><br>
+                            <p>Es evidente que esta técnica tiene su lógica
+                                cuando al menos las primeras imágenes tienen
+                                fondo transparente, ya que sino la primera
+                                imagen (con fondo opaco) taparía totalmente las
+                                imágenes que hubieran quedado por
+                                detrás.</p><br>
+                            <p>En este ejemplo, el fondo infantil es totalmente
+                                opaco, igual que el escudo (que está en el
+                                centro de una imagen con fondo transparente
+                                dentro de un lienzo mucho más grande que el
+                                propio escudo), mientras que el fondo azul es
+                                semitransparente, lo que le da una tonalidad
+                                azulada al fondo infantil, que queda por
+                                debajo.</p>
+                        </article>
+
+                        <h2>Extras</h2>
+                        <article>
+                            <p>Tenemos dos posibilidades extras que nos
+                                permiten:</p>
+                            <ul>
+                                <li>Tener una imagen de fondo fija, que no se
+                                    moverá con el contenido de la imagen, como
+                                    es el caso del logo de CSS3 semitransparente
+                                    de este html (que está ubicado siempre en el
+                                    centro de la página).</li><br>
+                                <div class="caja-codigo">
+                                    background:url('img/fondo.jpg');<br>
+                                    background-attachment:fixed;
+                                </div><br>
+                                <li>Tener una imagen adaptable de fondo que se
+                                    adaptará al espacio del < div > donde se
+                                    ubique.</li><br>
+                                <div class="caja-codigo">
+                                    background:url('img/fondo.jpg');<br>
+                                    background-repeat:no-repeat;<br>
+                                    background-size:cover;
+                                </div>
+                            </ul>
+                        </article>
+
+                    </section>
+
+                    <footer>
+                        <p>&copy; 2023 Tutorial HTML 5 y CSS. Todos los derechos
+                            reservados.</p>
+                    </footer>
+
+                </body>
+            </html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios</title>
+        <link rel="stylesheet" href="CSS/estilo1.css">
+        <link rel="icon" href="IMG/corazon.ico">
+    </head>
+    <body>
+        <header>
+            <h1>Tutorial HTML 5, CSS Formularios</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li> <a href="index.html">Inicio </a></li>
+                <li> <a href="Bordes.html">Bordes </a></li>
+                <li> <a href="Sombras.html">Sombras </a></li>
+                <li> <a href="Cajas.html">Cajas Flotantes </a></li>
+                <li> <a href="Posicion.html">Posicion </a></li>
+                <li> <a href="Transformacion.html">Transformacion </a></li>
+                <li> <a href="Imagenes.html">Imagenes</a></li>
+                <li> <a href="Formularios.html">Formularios </a></li>
+                <li> <a href="Iframe.html">Iframe </a></li>
+                <li> <a href="Transiciones.html">Transiciones </a></li>
+                <li> <a href="Columnas.html">Columnas </a></li>
+                <li> <a href="Video.html">Video </a></li>
+                <li> <a href="Audio.html">Audio </a></li>
+                <li> <a href="Transparencias.html">Transparencias </a></li>
+                <li> <a href="Animacion.html">Animacion </a></li>
+                <li> <a href="Svg.html">SVG </a></li>
+                <li> <a href="Responsive.html">Responsive </a></li>
+                <li> <a href="Editable.html">Contenido editable </a></li>
+                <li> <a href="Storage.html">Storage </a></li>
+            </ul>
+
+        </nav>
+
+        <section>
+
+            <h2>Ejemplo práctico</h2>
+            <article>
+                <p>
+                    Los formularios fueron una de las primeras mejoras que se
+                    dieron a conocer de HTML5 y de las que más revuelo causaron,
+                    sobre todo por su gran capacidad de autovalidación de una
+                    manera extremadamente fácil y sin necesidad de utilizar
+                    JavaScript.
+
+                    Vamos a hacer un ejemplo práctico de un formulario para
+                    registrarse en el club friki de los
+                    "Amigos de Flash Gordon"..
+                </p>
+                <div class="contenedor">
+
+                    <h1>Fan-club "Amigos de Flash Gordon"</h1>
+
+                    <p>
+                        Regístrate y disfruta de nuestras increíbles ventajas
+                        para poder seguir siendo
+                        adicto registrado del glorioso e insuperable <b>Flash
+                            Gordon</b>.
+                    </p>
+
+                    <form>
+
+                        <table class="tabla">
+
+                            <tr>
+
+                                <td>
+
+                                    <label>Tu nombre:</label><br>
+                                    <input type="text" name="nombre" required
+                                        title="Escribe tu nombre">
+
+                                </td>
+
+                                <td>
+
+                                    <label>Correo electrónico: (*)</label><br>
+                                    <input type="email" name="correo"
+                                        placeholder="usuario@dominio.com"
+                                        required>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+
+                                    <label>Contraseña: (*)</label><br>
+                                    <input type="password" name="password"
+                                        required minlength="6">
+
+                                </td>
+
+                                <td class="personajes">
+
+                                    <label>Selecciona tu personaje
+                                        preferido:</label><br>
+
+                                    <input type="radio" name="personaje"
+                                        value="flash"> Flash Gordon<br>
+
+                                    <input type="radio" name="personaje"
+                                        value="ming"> Ming, el despiadado<br>
+
+                                    <input type="radio" name="personaje"
+                                        value="aura"> La Princesa Aura<br>
+
+                                    <input type="radio" name="personaje"
+                                        value="vultan"> Príncipe Vultan<br>
+
+                                    <input type="radio" name="personaje"
+                                        value="dale"> Dale Arden
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+
+                                    <label>Fecha de nacimiento:</label><br>
+                                    <input type="date" name="fecha">
+
+                                </td>
+
+                                <td>
+
+                                    <label>¿Cuántos cómics de Flash Gordon lees
+                                        a la semana?</label><br>
+                                    <input type="range" min="0" max="10">
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+
+                                    <label>¿Color ideal de las mayas de Flash
+                                        Gordon?</label><br>
+                                    <input type="color" value="#ff0000">
+
+                                </td>
+
+                                <td>
+
+                                    <label>¿Cuántos cómics te inyectas cada
+                                        día?</label><br>
+                                    <input type="number" min="0" max="100"
+                                        value="10">
+
+                                </td>
+
+                            </tr>
+
+                        </table>
+
+                        <br>
+
+                        <button type="submit">Enviar los datos</button>
+
+                    </form>
+
+                </div>
+
+                <p>
+                    <p>Primero vamos a ver algunas de las características de
+                        HTML5 que igual has pasado por alto:</p>
+                    <ul>
+                        <li>De entrada, el cursor podría está situado por
+                            defecto dentro del primer campo, para que el usuario
+                            pueda escribir sin tener que hacer clic en él.</li>
+                        <li>Si sitúas el cursor encima de cualquier campo podrás
+                            leer una explicación adicional sobre esa
+                            pregunta.</li>
+                        <li>El segundo y tercer campo son obligatorios, por lo
+                            que -cuando estés en ellos- tendrán el borde rojo
+                            hasta que sean rellenados y de manera correcta.</li>
+                        <li>El correo electrónico, además sólo aceptará el valor
+                            introducido si detecta una @ enmedio y un formato
+                            apropiado.</li>
+                        <li>Además, el correo electrónico y otros campos ofrecen
+                            un valor de ejemplo que se elimina automáticamente
+                            al introducir cualquier valor.</li>
+                        <li>Al pulsar el botón "Enviar los datos" sin haber
+                            introducido los campos obligatorios o bien el correo
+                            electrónico con un formato no válido aparecerá un
+                            mensaje de alerta con información adicional que
+                            informa de los errores encontrados.</li>
+                        <li>Al mismo tiempo es posible añadir símbolos de
+                            OK/error después de cada campo que indican si existe
+                            algún error o son correctos.</li>
+                    </ul>
+                </p>
+            </article>
+
+            <h2>Nuevas etiquetas para formularios</h2>
+            <article>
+                <p>Lo primero a tener en cuenta hace referencia a la estructura
+                    general. Así, todas las etiquetas que vamos a utilizar para
+                    el formulario tienen que estar ubicadas dentro de las
+                    etiquetas del formulario < form > y < /form >.</p>
+                <div class="caja-codigo">
+                    < form action="enviarmail.php" method="post"><br>
+                    < /form >
+                </div><br>
+                <p>En este caso, detrás de action hemos añadido la ruta del
+                    fichero .php que enviará los datos introducidos en el
+                    formulario y al final con method indicamos el método "post",
+                    que garantiza una mayor seguridad para los datos
+                    enviados.</p><br>
+                <p>Vamos a echar un vistazo a las diferentes etiquetas o
+                    < inputs > que componen el formulario de ejemplo superior
+                    para
+                    poder ver las nuevas características que HTML5
+                    aporta:</p><br>
+
+                <h3>Tu nombre (text)</h3><br>
+                <div class="caja-codigo">
+                    < input type="text" size="40"
+                    title="Escribe tu nombre real. Es el que aparecerá en tu..."
+                    name="nombre" autofocus required/>
+                </div><br>
+                <p>Con type indicamos qué tipo de datos estamos pidiendo (en
+                    este caso 'texto normal').
+                    Si queremos un campo de texto más largo o extenso podemos
+                    especificarlo con size.
+                    Con title podemos incluir un texto adicional que aparecerá
+                    cuando el usuario coloque el cursor encima.
+                    name es importante ya que es la manera en la que se
+                    identificará este valor al enviar la información.
+                    En todo el formulario sólo puede haber un campo con
+                    autofocus, ya que este parámetro señala qué campo del
+                    formulario estará inicialmente seleccionado por defecto para
+                    que el usuario pueda escribir sin tener que seleccionarlo.
+                    El parámetro required indica que este campo es obligatorio y
+                    que sino se rellena no se podrá enviar la información.</p>
+
+                <h3>Contraseña (password)</h3>
+                <div class="caja-codigo">
+                    < input type="password" size="7"
+                    title="Escribe la contraseña que desee..." name="password"
+                    required/>
+                </div><br>
+                <p>Al detectar que en type se especifica el valor 'password' lo
+                    que el usuario escribe se enmascara con círculos de forma
+                    automática.
+                    El required final nos indica que este campo también es
+                    obligatorio.</p>
+                <h3>Correo electrónico (email)</h3>
+                <div class="caja-codigo">
+                    < input type="email" placeholder="usuario@dominio.com"
+                    size="40" title="Escribe tu correo electrónico..."
+                    name="mail" required/>
+                </div><br>
+                <p>Como en type se especifica 'email' la autovalidación de este
+                    dato incluirá la búsqueda de una @ y un mínimo formato
+                    apropiado.
+                    En este caso observamos el parámetro placeholder, que es el
+                    responsable de que inicialmente aparezca ya escrito en gris
+                    flojo (usuario@dominio.com). Automáticamente cuando el
+                    usuario escribe cualquier valor dicho texto se elimina,
+                    igualmente si el usuario borra todo el contenido, el texto
+                    especificado con placeholder vuelve a aparecer.</p>
+                <h3>Fecha de nacimiento (date)</h3>
+                <div class="caja-codigo">
+                    < input type="date" value="2000-01-01" name="nacimiento"
+                    title="La fecha en la que naciste, ya que..."/>
+                </div><br>
+                <p>El valor 'date' dentro de type identifica que el valor a
+                    utilizar es una fecha y que por lo tanto aparecerá el acceso
+                    a un calendario, que se puede ubicar directamente en una
+                    fecha inicial utilizando el parámetro 'value'.
+                    Así, value permite especificar la fecha inicial por defecto
+                    que aparecerá inicialmente en el calendario. Sino se indica
+                    ningún valor aparecerá la fecha actual.</p>
+
+                <div class="titulo-range"> ¿Cuántos cómics de Flash Gordon lees
+                    a la semana? (range)</div><br>
+
+                <div class="caja-codigo">
+                    < input type="range" min="1" max="7" value="2" step="1"
+                    title="Necesitamos saber..." name="adiccion"/>
+                </div><br>
+                <p>Al indicar en type el valor 'range' aparece una barra
+                    (slider) con la que el usuario puede introducir un valor
+                    numérico arrastrando la barra hasta el valor que
+                    corresponda.
+                    Con min y max se especifica el valor mínimo y máximo que el
+                    usuario podrá introducir.
+                    Para especificar un valor inicial utilizamos el parámetro
+                    value.
+                    Con step podemos especificar el valor de incremento (o
+                    decremento) de cada punto del slider. Por ejemplo, un valor
+                    de "1" quiere decir que cada vez que el usuario mueve un
+                    espacio del slider se aumenta o se disminuye el valor de 1
+                    en 1, y que además no serán válidos los decimales.</p><br>
+                <div class="titulo-range"> ¿Cuál crees que hubiera sido el color
+                    ideal de las mayas de Flash Gordon? (color)</div><br>
+
+                <div class="caja-codigo">
+                    < input type="color" value="#FF0000"
+                    title="Con esta votación..." name="color_preferido"/>
+                </div><br>
+                <p>Al indicar en type el valor 'color' aparece un selector de
+                    colores en el que se podrá escoger el color deseado de entre
+                    los que aparecen, o bien indicando el código RGB del color.
+                    Para especificar un color inicial por defecto utilizamos el
+                    parámetro value indicando el código de color inicial en
+                    hexadecimal.</p> <br>
+                <div class="titulo-range"> ¿Cuántos cómics de Flash Gordon
+                    tienes actualmente? (number)</div><br>
+
+                <div class="caja-codigo">
+                    < input type="number" min="100" max="9000" step="1"
+                    value="100" title="De momento el ganador..." name="comics"/>
+                </div><br>
+
+                <p>Con min y max se especifica el valor mínimo y máximo que
+                    serán tomados como válidos.
+                    Para especificar un valor inicial utilizamos el parámetro
+                    value.
+                    Con step podemos especificar el intervalo o
+                    'de cuánto en cuánto' aumentarán o disminuirán los datos
+                    introducidos. Por ejemplo, un valor de "10" quiere decir que
+                    cada vez que el usuario aumenta o reduce el valor éste se
+                    mueve de 10 en 10 y que además únicamente serán válidos los
+                    datos que sigan este intervalo (100, 110, 120, 130,
+                    etc...)</p>
+                <h3>Enviar</h3>
+                <div class="caja-codigo">
+                    < input type="submit" value="Enviar los datos"/>
+                </div><br>
+                <p>Con type="submit" estamos añadiendo el típico botón "Enviar",
+                    en el que a través del parámetro value podemos indicar el
+                    texto que se mostrará dentro del botón.
+                    En este caso la acción de enviar la información se realizará
+                    de la manera automática, enviando los datos a la dirección
+                    que se ha indicado en < form >.</p>
+
+            </article>
+
+            <h2>Otras etiquetas o inputs > existentes</h2>
+            <article></article>
+            <h2>Resumen resumido de los nuevos atributos</h2>
+            <article></article>
+            <h2>Estilos CSS y autovalidación visual</h2>
+            <article></article>
+            <h2>Múltiples transformaciones simultáneas</h2>
+            <article></article>
+            <h2>Compatibilidad con todos los navegadores</h2>
+            <article></article>
+
+        </section>
+
+        <footer>
+            <p>&copy; 2023 Tutorial HTML 5 y CSS. Todos los derechos
+                reservados.</p>
+        </footer>
+
+    </body>
+</html>
