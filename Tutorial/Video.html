@@ -41,7 +41,7 @@
 
             <h2> Diferentes estándares de vídeo </h2>
             <article>
-                
+
                 <p>Aunque el código HTML5 para la inserción de vídeo
                     directamente en HTML5 es muy sencillo, todavía tiene un
                     único inconveniente. No todos los navegadores aceptan todos
@@ -55,24 +55,137 @@
 
                     Actualmente existen 3 estándares de vídeo que utilizan
                     códecs diferentes y que vienen impulsados por grandes
-                    empresas.</p> 
-                    <h3>Formatos</h3>
-                    <br>
+                    empresas.</p>
+                <h3>Formatos</h3>
+                <br>
 
-                    <img src="IMG/img.video.png">
+                <img src="IMG/img.video.png">
             </article>
 
             <h2>Compatibilidad con navegadores</h2>
-            <article></article>
+            <article>
+                <p>La tabla de los diferentes formatos de vídeo aceptados por
+                    los diferentes navegadores queda así:</p><br>
+                <img src="IMG/video2.png"><br><br>
+            </article>
 
             <h2> video </h2>
-            <article></article>
+            <article>
+                <p>El código HTML estándar para visualizar un único formato de
+                    vídeo sería:</p>
+
+                <div class="caja-codigo">
+                    < video > <br>
+                    < source src="video.ogv" type="video/ogg"/>
+                    < /video > </div><br><br>
+                <p>En el tag < video > es posible incorporar un gran número de
+                    atributos que nos ayudan a poder controlar mejor el video,
+                    como son:</p>
+                <ul>
+                    <li> <b>width:</b> Indica la anchura del vídeo, expresada en
+                        píxeles (px) o en porcentaje (%)</li>
+                    <li> <b>height:</b> Indica la altura del vídeo, expresada en
+                        píxeles (px) o en porcentaje (%)</li>
+                    <li> <b>controls:</b> Muestra los controles del vídeo (play,
+                        pause, volume, etc.)</li>
+                    <li> <b>autoplay:</b> Reproduce el vídeo automáticamente al
+                        cargar la página</li>
+                    <li> <b>loop:</b> Reproduce el vídeo en bucle</li>
+                    <li> <b>muted:</b> Silencia el vídeo</li>
+                    <li> <b>poster:</b> Muestra una imagen mientras no se
+                        reproduce el vídeo
+                    </ul>
+                    <p>Por lo tanto, si utilizásemos todos los atributos, el
+                        código anterior quedaría de la siguiente manera:</p>
+                    <div class="caja-codigo">
+                        < video width="800" height="600" controls autoplay loop
+                        poster="fotograma.png"><br>
+                        < source src="video.ogv" type="video/ogg"/><br>
+                        < /video > </div><br><br>
+                    <p>Si queremos que el vídeo se pueda visualizar desde
+                        cualquier navegador (que soporte HTML5), tenemos que
+                        añadir a este código más posibilidades y por lo tanto
+                        tenemos que tener el vídeo grabado en diferentes
+                        formatos.
+                    </p><br>
+                    <p>El código HTML completo quedaría así:</p><br>
+                    <div class="caja-codigo">
+                        < video width="800" height="600" controls autoplay loop
+                        poster="fotograma.png"><br>
+                        < source src="video.ogv" type="video/ogg"/><br>
+                        < source src="video.mp4" type="video/mp4"/><br>
+                        < source src="video.webm" type="video/webm"/><br>
+                        < p>Tu navegador no soporta HTML5< /p>
+                    </video> </div><br><br>
+            </article>
 
             <h2>Ejemplo práctico</h2>
-            <article></article>
+            <article>
+                <p>Si además queremos asegurarnos de que el vídeo también se
+                    podrá visualizar en navegadores antiguos tendremos que
+                    añadir la posibilidad de visualizar el vídeo en el formato
+                    de Flash (.flv), que es soportado por todos los navegadores,
+                    quedando el código de la siguiente manera:</p><br>
+                <div class="caja-codigo">
+                    < video width="800" height="600" controls autoplay loop
+                    poster="fotograma.png"><br>
+                    < source src="video.ogv" type="video/ogg"/><br>
+                    < source src="video.mp4" type="video/mp4"/><br>
+                    < source src="video.webm" type="video/webm"/><br>
+                    <br>
+                    < object width="800" height="600" data="video.flv"><br>
+                    < param name="movie" value="video.flv"><br>
+                    < embed src="video.flv" width="800" height="600"><br>
+                    < /object><br>
+                    <br>
+                    < p>Tu navegador no soporta HTML5< /p><br>
+                    < /video >
+                </div> <br><br>
+                <p>En este ejemplo se han utilizado únicamente los atributos
+                    'width', 'height', 'controls' y 'poster', evitando utilizar
+                    la opción 'autoplay' (ya que no nos interesa que el video se
+                    reproduzca automáticamente al cargar la página).</p>
+
+                    <video  width="800" height="600" controls>
+                        <source src="Video/video playa corto mp4.mp4" type="video/mp4"/>
+                        <p>Tu navegador no soporta HTML5</p>
+                    </video>
+            </article>
 
             <h2>Añadir un vídeo de Youtube</h2>
-            <article></article>
+            <article>
+                <p>Para añadir un vídeo de Youtube lo único que tenemos que
+                    hacer es:</p>
+                <ol>
+                    <li>Ir a la web de www.youtube.com y acceder al vídeo que
+                        quieras añadir a tu web.</li>
+                    <li>Hacer clic con el botón derecho del ratón sobre el vídeo
+                    </li>
+                    <li>Seleccionar la opción "Copiar código de inserción".</li>
+                    <li>Ya dentro del editor de HTML, crear un DIV y pegar
+                        dentro el contenido que se ha copiado en el punto
+                        anterior, que será algo parecido al siguiente
+                        código:</li>
+                </ol>
+                <div class="caja-codigo">
+                    < iframe width="752" height="432"
+                    src="https://www.youtube.com/embed/bD_nlDO09f4?list=RDbD_nlDO09f4"
+                    title="ＮＯＳＴＡＬＧＩＡ -  PHONK MIX FOR NIGHT DRIVE - BEST LXST CXNTURY TYPE - 3 HOUR CAR MUSIC 2025"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>< /iframe >
+                </div> <br><br>
+                <div>
+                    <iframe width="752" height="432"
+                        src="https://www.youtube.com/embed/bD_nlDO09f4?list=RDbD_nlDO09f4"
+                        title="ＮＯＳＴＡＬＧＩＡ -  PHONK MIX FOR NIGHT DRIVE - BEST LXST CXNTURY TYPE - 3 HOUR CAR MUSIC 2025"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                </div>
+            </article>
 
         </section>
 
